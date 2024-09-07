@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+</head>
+<body>
+<div class="calcu">
+
+    <h1>Student Grade Calculator</h1>
+
+    <!-- Prelim Form -->
+    <h2>Prelim Term</h2>
+    <form id="prelimForm">
+        <label for="quizzes">Over-all score of Quizzes (60%):</label>
+        <input type="number" id="quizzes" required><br>
+
+        <label for="assignments">Over-all score of Assignments (20%):</label>
+        <input type="number" id="assignments" required><br>
+
+        <label for="labActivities">Over-all score of Lab Activities (20%):</label>
+        <input type="number" id="labActivities" required><br>
+
+        <label for="pe">Prelim Exam:</label>
+        <input type="number" id="pe" required><br>
+
+        <button type="button" onclick="computePrelim()">Compute Prelim Grade</button>
+    </form>
+
+    <!-- Midterm Form -->
+    <h2>Midterm Term</h2>
+    <form id="midtermForm">
+        <label for="prelimGrade">Prelim Grade:</label>
+        <input type="number" id="prelimGrade" required readonly><br>
+
+        <label for="tmg">Total Midterm Grade:</label>
+        <input type="number" id="tmg" required><br>
+
+        <button type="button" onclick="computeMidterm()">Compute Midterm Grade</button>
+    </form>
+
+    <!-- Final Form -->
+    <h2>Final Term</h2>
+    <form id="finalForm">
+        <label for="midtermGrade">Midterm Grade:</label>
+        <input type="number" id="midtermGrade" required readonly><br>
+
+        <label for="tfg">Total Final Grade:</label>
+        <input type="number" id="tfg" required><br>
+
+        <button type="button" onclick="computeFinal()">Compute Final Grade</button>
+    </form>
+
+    <!-- Result Section -->
+    <h3>Results</h3>
+    <p id="prelimResult"></p>
+    <p id="midtermResult"></p>
+    <p id="finalResult"></p>
+
+</div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
